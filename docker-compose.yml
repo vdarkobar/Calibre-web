@@ -32,7 +32,7 @@ services:
   # Watchtower - automating Docker container base image updates.
   watchtower:
     image: containrrr/watchtower
-    container_name: watchtower-calibre
+    container_name: watchtower-cw
     restart: always
 
     networks:
