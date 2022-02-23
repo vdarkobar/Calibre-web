@@ -9,6 +9,8 @@ sed -i "s|02|${PUID}|" .env && \
 sed -i "s|03|${PGID}|" .env && \
 sed -i "s|04|${CPORT}|" .env && \
 rm README.md && \
+rm books/tmp && \
+rm config/tmp && \
 while true; do
     read -p "Execute 'docker-compose up -d' now? (y/n)" yn
     case $yn in
