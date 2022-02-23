@@ -4,7 +4,7 @@
 </p> 
   
 # Calibre-Web
-### Web interface for browsing, reading and downloading eBooks.
+*Web interface for browsing, reading and downloading eBooks.*
   
 ---
   
