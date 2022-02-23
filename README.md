@@ -7,8 +7,8 @@
   
 #### *Decide what you will use for*:
 ```
-Time Zone nad Calibre-web Port Number.
-PUID/PGID (id <user>)
+Time Zone, PUID/PGID (id <user>),
+Calibre-web Port Number.
 ```
   
 ### *Run this command*:
@@ -22,4 +22,10 @@ chmod +x setup.sh && \
 Visit your *server local ip* + *port* designated during setup:
 ```
 http://<LocalIP>:<PORT>
+```
+  
+### Log:
+```
+sudo docker-compose logs calibre-web
+sudo docker logs -tf --tail="50" calibre-web
 ```
