@@ -8,7 +8,7 @@
   
 ---
   
-*This app requires you to have an existing Calibre database at the /books location*.
+*This app requires you to have an existing Calibre database at the /books location*.  
 *If needed, after copying library, set ownership of the /books folder (Database not writable).*
 ```
 sudo chown -R user:group folder/
