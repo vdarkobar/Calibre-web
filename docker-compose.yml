@@ -17,7 +17,7 @@ services:
       - cweb
 
     ports:
-      - 8083:8083
+      - $CALPORT:8083
 
     environment:
       - PUID=$PUID
