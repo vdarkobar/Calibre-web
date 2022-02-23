@@ -1,0 +1,50 @@
+version: "3.9"
+
+networks:
+  cweb:
+    name: cweb
+    driver: bridge
+
+services:
+
+  # Calibre-web -  web app providing a clean interface for browsing, reading and downloading eBooks.
+  calibre-web:
+    image: ghcr.io/linuxserver/calibre-web
+    container_name: calibre-web
+    restart: unless-stopped
+
+    networks:
+      - cweb
+
+    ports:
+      - 8083:8083
+
+    environment:
+      - PUID=$PUID
+      - PGID=$PGID
+      - TZ=$TZ
+      - DOCKER_MODS=linuxserver/calibre-web:calibre
+
+    volumes:
+      - ./config:/config
+      - ./books:/books
+
+  # Watchtower - automating Docker container base image updates.
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: always
+
+    networks:
+      - cweb
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    environment:
+      - TZ=$TZ
+      - WATCHTOWER_DEBUG=true
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_REMOVE_VOLUMES=true
+      - WATCHTOWER_INCLUDE_STOPPED=true
+      - WATCHTOWER_SCHEDULE=0 30 5 * * * # Everyday at 5:30
