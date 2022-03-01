@@ -8,6 +8,11 @@
   
 ---
   
+Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>, add *Subdomain* for your *WordPress*. 
+```
+    CNAME | subdomain | @ (or example.com)
+```
+  
 *This app requires you to have an existing Calibre database at the /books location*.  
 *If needed, after copying library, set ownership of the /books folder (Database not writable).*
 ```
