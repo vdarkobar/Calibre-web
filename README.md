@@ -16,7 +16,7 @@ Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>, add *Subdomain* 
 *This app requires you to have an existing Calibre database at the /books location*.  
 *If needed, after copying library, set ownership of the /books folder (Database not writable).*  
 *Default login details: admin/admin123*  
-*Create new User and enable option to read eBooks*
+*Create new User and enable option to read eBooks*.
 ```
 sudo chown -R user:group folder/
 ```
