@@ -13,7 +13,7 @@ Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>, add *Subdomain* 
     CNAME | subdomain | @ (or example.com)
 ```
   
-*This app requires you to have an existing Calibre database at the /books location (Volume: /path/to/calibre/library:/books)*.  
+*This app requires you to have an existing Calibre database at the /books location (Docker Volume: /path/to/calibre/library:/books)*.  
 *If needed, after copying library, set ownership of the /books folder (Database not writable).*  
 *Create new User and enable option to read eBooks*.  
 *Default login details: admin/admin123*  
