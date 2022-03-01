@@ -8,7 +8,7 @@
   
 ---
   
-Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>, add *Subdomain* for your *WordPress*. 
+Login to <a href="https://dash.cloudflare.com/">CloudFlare</a>, add *Subdomain* for your *Calibre-Web*. 
 ```
     CNAME | subdomain | @ (or example.com)
 ```
